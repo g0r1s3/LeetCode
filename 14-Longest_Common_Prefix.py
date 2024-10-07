@@ -1,11 +1,7 @@
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        if not strs:
-            return ""
-        prefix = strs[0]
-        for string in strs[1:]:
-            while not string.startswith(prefix):
-                prefix = prefix[:-1]
-                if not prefix:
-                    return ""
-        return prefix
+def is_prime(n):
+  for i in range(2,int(n/2)):
+    if (n%i) == 0:
+      return False
+  return True
+
+is_prime(7)
